@@ -14,6 +14,7 @@
 		6F7661F62B36A29B0021BB94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F7661F52B36A29B0021BB94 /* Assets.xcassets */; };
 		6F7661F92B36A29B0021BB94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F7661F82B36A29B0021BB94 /* Preview Assets.xcassets */; };
 		6F7662042B36A29C0021BB94 /* VisionOSSamplerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7662032B36A29C0021BB94 /* VisionOSSamplerTests.swift */; };
+		6F76620E2B36A7640021BB94 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F76620D2B36A7640021BB94 /* TopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		6F7661FA2B36A29B0021BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F7661FF2B36A29C0021BB94 /* VisionOSSamplerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisionOSSamplerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F7662032B36A29C0021BB94 /* VisionOSSamplerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOSSamplerTests.swift; sourceTree = "<group>"; };
+		6F76620D2B36A7640021BB94 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				6F7661EF2B36A29B0021BB94 /* VisionOSSamplerApp.swift */,
 				6F7661F12B36A29B0021BB94 /* ContentView.swift */,
+				6F76620D2B36A7640021BB94 /* TopView.swift */,
 				6F7661F32B36A29B0021BB94 /* ImmersiveView.swift */,
 				6F7661F52B36A29B0021BB94 /* Assets.xcassets */,
 				6F7661FA2B36A29B0021BB94 /* Info.plist */,
@@ -219,6 +222,7 @@
 			files = (
 				6F7661F22B36A29B0021BB94 /* ContentView.swift in Sources */,
 				6F7661F02B36A29B0021BB94 /* VisionOSSamplerApp.swift in Sources */,
+				6F76620E2B36A7640021BB94 /* TopView.swift in Sources */,
 				6F7661F42B36A29B0021BB94 /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,23 +18,36 @@ struct ContentView: View {
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
 
     var body: some View {
-            NavigationStack {
-                List {
-                    NavigationLink {
-                        ContentView()
-                    } label: {
-                        Text("ContentView")
-                    }
+        VStack {
+            Model3D(named: "Scene", bundle: realityKitContentBundle)
+                .padding(.bottom, 50)
 
-                    NavigationLink {
-                        Text("SampleView")
-                    } label: {
-                        Text("Sample1")
+            Text("Hello, world!")
+
+            Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
+                .toggleStyle(.button)
+                .padding(.top, 50)
+        }
+        .padding()
+        .onChange(of: showImmersiveSpace) { _, newValue in
+            Task {
+                if newValue {
+                    switch await openImmersiveSpace(id: "ImmersiveSpace") {
+                    case .opened:
+                        immersiveSpaceIsShown = true
+                    case .error, .userCancelled:
+                        fallthrough
+                    @unknown default:
+                        immersiveSpaceIsShown = false
+                        showImmersiveSpace = false
                     }
+                } else if immersiveSpaceIsShown {
+                    await dismissImmersiveSpace()
+                    immersiveSpaceIsShown = false
                 }
-                .navigationTitle("visionOS Sampler")
             }
         }
+    }
 }
 
 #Preview(windowStyle: .automatic) {
